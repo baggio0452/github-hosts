@@ -6,7 +6,7 @@ name: Github-Hosts
 on:
   push:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '12 0 * * *'
 
 jobs:
   build:
@@ -32,7 +32,7 @@ jobs:
         run: rm -rf target/
 
       - name: Commit
-        id: commit
+        id: 提交
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "GitHub Actions [Bot]"
@@ -50,4 +50,4 @@ jobs:
       - name: Push changes
         uses: ad-m/github-push-action@v0.6.0
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${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}
